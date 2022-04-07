@@ -1,2 +1,9 @@
 # Yelp App
-project created with reactjs
+
+This is project which arrows you to add ,delete, rate restaurant
+
+## Built with 
+
+- Nodejs
+- React js
+- Postgress
