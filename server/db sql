@@ -1,0 +1,90 @@
+\?  [for help]
+
+\l [list database]
+
+CREATE DATABASE database_name [create database]
+
+DROP DATABASE database_name [delete database]
+
+\c (database name)[connect to database]
+
+\d [list tables]
+
+\d name_of_table [to list specific table with information on]
+
+
+
+
+
+
+
+//create table without limitation on required
+
+CREATE TABLE products(
+id INT,
+name VARCHAR(50),
+price INT,
+on_sale boolean
+);
+
+//create table with limitation on required (BIGSERIAL is for generating automatic incriment id)
+
+CREATE TABLE products(
+id BIGSERIAL NOT NULL,
+name VARCHAR(50) NOT NULL,
+price INT NOT NULL,
+on_sale boolean NOT NULL
+);
+
+//delete table
+
+DROP TABLE products
+
+
+//add new column
+
+ALTER TABLE products ADD COLUMN featured boolean;
+
+//delete column
+
+ALTER TABLE products DROP COLUMN featured;
+
+
+
+
+//yelp
+
+CREATE TABLE restaurants(
+id BIGSERIAL NOT NULL PRIMARY KEY,
+name VARCHAR(50) NOT NULL,
+location VARCHAR(50) NOT NULL,
+price_range INT NOT NULL check(price_range>=1 and price_range<=5)
+);
+
+//insert data in table
+INSERT INTO restaurants(id,name,location,price) values (123,'macdonalds','NewYork',4);
+
+//insert data in table and return data of created column
+INSERT INTO restaurants(id,name,location,price) values (123,'macdonalds','NewYork',4) returning *;
+
+//view all data from table
+
+SELECT * from restaurants;
+
+
+//view specific data from table
+
+SELECT name from restaurants;
+
+//update all column with specific id
+
+UPDATE restaurants SET name = 'Nyanja', location = 'gisenyi', price_range = 3 where id = 9;
+
+
+
+
+
+-------------------------------------------------
+
+CREATE DATABASE Payingtone; payingtone [create new]
+DROP DATABASE Payingtone; payingtone [delete database]
