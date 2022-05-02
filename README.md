@@ -1,6 +1,6 @@
 # Yelp App
 
-This is project which arrows you to add ,delete, rate restaurant
+This is project which arrows you to add ,delete, rate restaurant from collections of restaurants
 
 ## Built with 
 
