@@ -9,6 +9,7 @@ This is project which arrows you to add ,delete, rate restaurant from collection
 - Postgress
 
 ### Setup
+- use npm to setup depencies on backend
 - Download or Clone Repository.
 - In case you downloaded repository Extract ZIP Folder.
 ### Installation
